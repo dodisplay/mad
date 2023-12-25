@@ -1,0 +1,65 @@
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    TextView hdr,Ans;
+    Button b1,b2,b3,b4;
+    EditText num1,num2;
+    float n1,n2;
+
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        hdr=findViewById(R.id.header);
+        Ans=findViewById(R.id.ans);
+        num1=findViewById(R.id.num1);
+        num2=findViewById(R.id.num2);
+        b1=findViewById(R.id.add);
+        b2=findViewById(R.id.sub);
+        b3=findViewById(R.id.mul);
+        b4=findViewById(R.id.div);
+
+    }
+
+    public void Add_hand(View view)
+    {
+        Ans=findViewById(R.id.ans);
+      n1=Float.parseFloat(num1.getText().toString());
+      n2=Float.parseFloat(num2.getText().toString());
+      Ans.setText(""+n1+""+"+"+""+n2+""+"="+(n1+n2));
+
+    }
+    public void Sub_hand(View view)
+    {
+        Ans=findViewById(R.id.ans);
+        n1=Float.parseFloat(num1.getText().toString());
+        n2=Float.parseFloat(num2.getText().toString());
+        Ans.setText(""+n1+""+"+"+""+n2+""+"="+(n1-n2));
+
+    }
+
+    public void Mul_hand(View view)
+    {
+        Ans=findViewById(R.id.ans);
+        n1=Float.parseFloat(num1.getText().toString());
+        n2=Float.parseFloat(num2.getText().toString());
+        Ans.setText(""+n1+""+"+"+""+n2+""+"="+(n1*n2));
+
+    }
+
+    public void Div_hand(View view)
+    {
+        Ans=findViewById(R.id.ans);
+        n1=Float.parseFloat(num1.getText().toString());
+        n2=Float.parseFloat(num2.getText().toString());
+        Ans.setText(""+n1+""+"+"+""+n2+""+"="+(n1/n2));
+
+    }
+}
